@@ -16,6 +16,12 @@ Infinite Stamina (Z) (Toggle)
 
 Infinite Health (I) (Toggle)
 
+Teleport to Nearest Pickup (V)
+
+Magnet Mode (B)
+
+Teleport to player (P)
+
 
 ## Installation
 1.) Download the latest release zip from the releases tab
