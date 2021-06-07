@@ -1,6 +1,12 @@
 # Mitch-Client
 A hacked client for the Muck game by DaniDev
 
+
+![Mitch Client](https://raw.githubusercontent.com/ugackMiner53/Mitch-Client/main/Images/Logo.png)
+
+
+
+
 ## Currently Contains:
 Noclip (C)
 
