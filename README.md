@@ -30,11 +30,4 @@ Teleport to player (P)
 
 3.) Hit accept if it asks about overwriting files
 
-If these steps do not work for you, undo that and download the release .dll from the releases tab
-
-then go to Muck -> Muck_Data -> Managed, and copy the release .dll into the folder
-
-make sure to hit accept if it asks about overwriting files
-
-
-**NOTE: YOU MAY WANT TO CREATE A BACKUP OF MUCK IF YOU WOULD LIKE TO UNINSTALL THE MOD**
+If these steps do not work for you, create an issue
