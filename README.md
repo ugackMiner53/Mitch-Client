@@ -24,10 +24,6 @@ Teleport to player (P)
 
 
 ## Installation
-1.) Download the latest release zip from the releases tab
+When you download the .zip from the releases tab, you then open steam, go to Muck, click on the little settings wheel, and hit "Manage", and then "Browse Local Files". It should open File Explorer with files such as "Muck.exe" and "Muck_Data". Simply extract the contents of the zip into the folder, and start Muck with steam. You can check if Mitch has loaded by going to the "About" page, and it should state that you are using Mitch Client.
 
-2.) Extract the zip into your Muck directory
-
-3.) Hit accept if it asks about overwriting files
-
-If these steps do not work for you, create an issue
+If these steps do not work for you, please create an issue
