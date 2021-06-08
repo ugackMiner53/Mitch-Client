@@ -34,7 +34,10 @@ namespace MitchClient
 
 		static void Postfix(PlayerInput __instance)
         {
-
+			if (OtherInput.Instance.OtherUiActive())
+			{
+				return;
+			}
 			if (Input.GetKeyDown(KeyCode.C))
 			{
 				Debug.Log("[Mitch] Pressed Clipping Key");
