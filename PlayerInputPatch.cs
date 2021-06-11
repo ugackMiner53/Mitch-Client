@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using HarmonyLib;
+using System.Collections.Generic;
 using BepInEx;
 
 namespace MitchClient
@@ -20,6 +21,21 @@ namespace MitchClient
 			Traverse.Create(instance).Field(fieldname).SetValue(value);
 		}
 
+		static string RenameBoolean(bool boolean)
+        {
+			if (boolean)
+				return "on";
+			else
+				return "off";
+        }
+
+
+
+		static void SendClientMessage(string message)
+        {
+			ChatBox.Instance.AppendMessage(-1, message, "Mitch Client");
+		}
+
 
 
 		static bool hovering = false;
@@ -28,7 +44,7 @@ namespace MitchClient
 		static bool strength = false;
 		static bool attackSpeed = false;
 		static int selectedPlayer = 0;
-
+		static Dictionary<int, int> oldAttackValues;
 
 
 
@@ -40,15 +56,15 @@ namespace MitchClient
 			}
 			if (Input.GetKeyDown(KeyCode.C))
 			{
-				Debug.Log("[Mitch] Pressed Clipping Key");
+				SendClientMessage("Noclip has been turned on");
 				GetValue<PlayerMovement>(__instance, "playerMovement").GetPlayerCollider().enabled = false;
 			}
 			if (Input.GetKeyUp(KeyCode.C))
 			{
-				Debug.Log("[Mitch] Released Clipping Key");
+				SendClientMessage("Noclip has been turned off");
 				GetValue<PlayerMovement>(__instance, "playerMovement").GetPlayerCollider().enabled = true;
 			}
-			if (Input.GetKey(KeyCode.R))
+			if (Input.GetKey(KeyCode.F))
 			{
 				GetValue<PlayerMovement>(__instance, "playerMovement").GetRb().velocity = Vector3.zero;
 				__instance.gameObject.transform.position += GetValue<Transform>(__instance, "playerCam").gameObject.transform.forward * Time.deltaTime * 30f;
@@ -73,21 +89,21 @@ namespace MitchClient
 			{
 				attackSpeed = !attackSpeed;
 			}
-			if (strength && Hotbar.Instance.currentItem != null)
+			if (strength && Hotbar.Instance.currentItem != null && Hotbar.Instance.currentItem.attackDamage < 5000)
 			{
-				Hotbar.Instance.currentItem.attackDamage = 6969;
+				Hotbar.Instance.currentItem.attackDamage += 6969;
 			}
-			else if (!strength && Hotbar.Instance.currentItem != null)
+			else if (!strength && Hotbar.Instance.currentItem != null && Hotbar.Instance.currentItem.attackDamage > 5000)
 			{
-				Hotbar.Instance.currentItem.attackDamage = 1;
+				Hotbar.Instance.currentItem.attackDamage -= 6969;
 			}
-			if (attackSpeed && Hotbar.Instance.currentItem != null)
+			if (attackSpeed && Hotbar.Instance.currentItem != null && Hotbar.Instance.currentItem.attackSpeed < 100f)
 			{
-				Hotbar.Instance.currentItem.attackSpeed = 100f;
+				Hotbar.Instance.currentItem.attackSpeed += 100f;
 			}
-			else if (!attackSpeed && Hotbar.Instance.currentItem != null)
+			else if (!attackSpeed && Hotbar.Instance.currentItem != null && Hotbar.Instance.currentItem.attackSpeed > 100f)
 			{
-				Hotbar.Instance.currentItem.attackSpeed = 1f;
+				Hotbar.Instance.currentItem.attackSpeed -= 100f;
 			}
 			if (hovering)
 			{

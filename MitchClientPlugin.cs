@@ -9,7 +9,7 @@ namespace MitchClient
     public class MitchClientPlugin : BaseUnityPlugin
     {
         public const string Id = "com.ugackminer.mitchclient";
-        public const string Version = "2.0.0";
+        public const string Version = "2.1.2";
         public Harmony Harmony { get; } = new Harmony(Id);
 
         public void Awake()
