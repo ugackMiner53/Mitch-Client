@@ -10,7 +10,7 @@ A hacked client for the Muck game by DaniDev
 ## Currently Contains:
 Noclip (C)
 
-Flight (R)
+Flight (F)
 
 Hover (Y) (Toggle)
 
