@@ -1,6 +1,8 @@
 # Mitch-Client
 A hacked client for the Muck game by DaniDev
 
+**IMPORTANT: THIS HACKED CLIENT HAS NOT BEEN UPDATED TO THE LATEST VERSION OF MUCK. PLEASE TRY TO FIND AN ALTERNATIVE WHILE WE UPDATE. WE CANNOT GARUNTEE THE BEST RESULTS WHEN USING MITCH ON THE LATEST VERSION**
+
 
 ![Mitch Client](https://raw.githubusercontent.com/ugackMiner53/Mitch-Client/main/Images/Logo.png)
 
