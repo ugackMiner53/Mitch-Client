@@ -1,4 +1,6 @@
 # Mitch-Client
+[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
+
 A hacked client for the Muck game by DaniDev
 
 **IMPORTANT: THIS HACKED CLIENT HAS NOT BEEN UPDATED TO THE LATEST VERSION OF MUCK. PLEASE TRY TO FIND AN ALTERNATIVE WHILE WE UPDATE. WE CANNOT GARUNTEE THE BEST RESULTS WHEN USING MITCH ON THE LATEST VERSION**
